@@ -10,6 +10,11 @@ Code:
 const player2 = new Player("Player 2")
 Expected Output: Player 2.
 
+Test: If a player is selected, it should display selected player.
+Code:
+player2;
+Expected Output: ("Player 2")
+
 
 
 
