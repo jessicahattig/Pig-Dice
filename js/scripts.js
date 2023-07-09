@@ -1,6 +1,8 @@
-function Player(name, score) {
+function Player(name, score, totalScore, currentScore) {
   this.name = name;
   this.score = score;
+  this.totalScore = totalScore;
+  this.currentScore = currentScore;
 }
 
 Player.prototype.equals = function (otherPlayer) {
@@ -18,19 +20,24 @@ const player2 = new Player('Player 2');
 const player2Set = new Player('Player 2');
 
 // game logic //
-
 function Game() {
   this.players = [];
 };
 
-Game.prototyope.addPlayer = function(player) {
-    const player = new Player(name);
+Game.prototype.addPlayer = function(player) {
+    //const player = new Player(name);
+    player.id = this.assignId();
+    this.players[player.id] = player;
     player.setScoreToZero();
     this.players.push(player);
 };
-let newGame = new Game();
-console.log(Game.addPlayer)
+ let newGame = new Game();
+ let newPlayer = new Player()
+ Game.addPlayer(newPlayer);
+// console.log(Game.addPlayer)
 
+// let newPlayer = new Player("bobby");
+// newPlayer.setScoreToZero();
 
 
 

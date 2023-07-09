@@ -15,10 +15,12 @@ Code:
 player2;
 Expected Output: ("Player 2")
 
-
-
+Describe: Game();
 Test: Player 1 and 2 score should start at zero.
-Code: this.score;
+Code: player.score;
+
+
+
 Expected Output: 0
 
 
