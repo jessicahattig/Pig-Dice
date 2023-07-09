@@ -14,12 +14,11 @@ Player.prototype.setScoreToZero = function () {
 
 // game logic //
 function Game() {
-  this.players = {};
+  this.players = [];
   this.playerId = 0;
 };
 
 Game.prototype.addPlayer = function (player) {
-  //const player = new Player(name);
   player.id = this.assignId();
   this.players[player.id] = player;
   player.setScoreToZero();
@@ -27,9 +26,18 @@ Game.prototype.addPlayer = function (player) {
 };
 
 Game.prototype.assignId = function () {
-  this.playerId += 1;
-  return this.playerId;
+  return this.playerId++;
 };
+
+//for DevTool console
+const game = new Game();
+const player1 = new Player("Player 1");
+game.addPlayer(player1);
+const player2 = new Player("Player 2");
+game.addPlayer(player2);
+
+player1;
+//
 
 Game.prototype.roll = function(){
   const randomNumber=Math.floor((Math.random()*6)+1);
@@ -37,8 +45,10 @@ Game.prototype.roll = function(){
 }
 
 function PlayerSwich(){
-  this.newPlayer.swish()
+  this.newPlayer.swish();
+  return otherPlayer;
 }
+
 let newGame = new Game();
 let newPlayer = new Player()
 Game.addPlayer(newPlayer);
