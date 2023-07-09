@@ -1,3 +1,5 @@
+//Business Logic - Player
+
 function Player(name, totalScore, currentScore) {
   this.name = name;
   this.totalScore = totalScore;
@@ -12,10 +14,11 @@ Player.prototype.setScoreToZero = function () {
   this.score = 0;
 };
 
-// game logic //
+//Business Logic - Game
 function Game() {
   this.players = [];
   this.playerId = 0;
+  this.currentPlayer = 0;
 };
 
 Game.prototype.addPlayer = function (player) {
@@ -31,8 +34,9 @@ Game.prototype.assignId = function () {
 
 Game.prototype.roll = function () {
   const randomNumber = Math.floor((Math.random() * 6) + 1);
+  const currrentPlayer = this.players[this.currentPlayer];
   if (randomNumber === 1) {
-    this.currentScore = 0
+    //this.currentScore += 0
   } else {
     this.currentScore += randomNumber;
   }
