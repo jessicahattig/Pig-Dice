@@ -29,23 +29,20 @@ Game.prototype.assignId = function () {
   return this.playerId++;
 };
 
-//for DevTool console
-const game = new Game();
-const player1 = new Player("Player 1");
-game.addPlayer(player1);
-const player2 = new Player("Player 2");
-game.addPlayer(player2);
+Game.prototype.roll = function () {
+  const randomNumber = Math.floor((Math.random() * 6) + 1);
+  if (randomNumber === 1) {
+    this.currentScore = 0
+  } else {
+    this.currentScore += randomNumber;
+  }
+  return randomNumber;
+};
 
-player1;
-//
+Game.prototype.
 
-Game.prototype.roll = function(){
-  const randomNumber=Math.floor((Math.random()*6)+1);
-  this.players[player.id] = player
-}
-
-function PlayerSwich(){
-  this.newPlayer.swish();
+function PlayerSwitch() {
+  this.newPlayer.switch();
   return otherPlayer;
 }
 

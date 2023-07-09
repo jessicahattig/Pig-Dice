@@ -2,33 +2,31 @@ Describe: Player();
 
 Test: Player 1 is equal to Player 1.
 Code: 
-const player1 = new Player("Player 1")
+  const player1 = new Player("Player 1")
 Expected Output: Player 1.
 
 Test: Player 2 is equal to Player 2.
 Code: 
-const player2 = new Player("Player 2")
+  const player2 = new Player("Player 2")
 Expected Output: Player 2.
 
 Test: If a player is selected, it should display selected player.
 Code:
-player2;
+  player2;
 Expected Output: ("Player 2")
 
 Describe: Game();
 
 Test: Player 1 and 2 score should start at zero and be assigned a ID.
 Code: 
-const game = new Game();
-const player1 = new Player("Player 1");
-game.addPlayer(player1);
-const player2 = new Player("Player 2");
-game.addPlayer(player2);
-
-player1;
-
+  const game = new Game();
+  const player1 = new Player("Player 1");
+  game.addPlayer(player1);
+  const player2 = new Player("Player 2");
+  game.addPlayer(player2);
+  player1;
 Expected Output: 
-Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
+  Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
 
 
 <!-- 
