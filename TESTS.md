@@ -31,7 +31,7 @@ Expected Output:
 Test: If a 1 is rolled, the player's turn should stay the same.  
 Code: 
   const game = new Game();
-  const player1 = new Player("Player 1");
+  const player1 = new Player("Player 1", 1);
   game.addPlayer(player1);
   const player2 = new Player("Player 2");
   game.addPlayer(player2);
@@ -39,10 +39,6 @@ Code:
   const rolledNumber = game.roll();
   console.log(rolledNumber);
   console.log(player1.score);
-  
-
-
-
 Expected Output:
 
 Test: If a 2, 3, 4, 5, or 6 are rolled, it should add that value to the player's score. 

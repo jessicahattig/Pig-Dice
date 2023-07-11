@@ -26,7 +26,7 @@ Game.prototype.addPlayer = function (player) {
 };
 
 Game.prototype.roll = function () {
-  const randomNumber = Math.floor((Math.random() * 6) + 1);
+  const randomNumber = Math.floor(Math.random() * 6) + 1;
   const currentPlayer = this.players[0];
     if (randomNumber !== 1) {
       currentPlayer.score += randomNumber;
