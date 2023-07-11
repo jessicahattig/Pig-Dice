@@ -28,6 +28,29 @@ Code:
 Expected Output: 
   Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
 
+Test: It should generate a random number between 1 and 6 when the "die" is rolled.
+Code: 
+  const game = new Game();
+  Game.prototype.roll = function () {
+  const randomNumber = Math.floor((Math.random() * 6) + 1);
+  }
+  randomNumber;
+Expected Output: A random number between 1 and 6 
+
+Test: If a 1 is rolled, the player's turn should end. 
+Code: 
+Expected Output:
+
+Test: If a 2, 3, 4, 5, or 6 are rolled, it should add that value to the player's score. 
+Code:
+Expected Output:
+
+Test: It should end the player's turn if they choose to "hold." 
+Code:
+Expected Output:
+
+
+
 
 <!-- 
 Test: It should start with player id 0

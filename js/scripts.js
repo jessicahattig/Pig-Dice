@@ -1,9 +1,8 @@
 //Business Logic - Player
 
-function Player(name, totalScore, currentScore) {
+function Player(name, score) {
   this.name = name;
-  this.totalScore = totalScore;
-  this.currentScore = currentScore;
+  this.score = 0;
 }
 
 Player.prototype.equals = function (otherPlayer) {
@@ -34,29 +33,14 @@ Game.prototype.assignId = function () {
 
 Game.prototype.roll = function () {
   const randomNumber = Math.floor((Math.random() * 6) + 1);
-  const currrentPlayer = this.players[this.currentPlayer];
-  if (randomNumber === 1) {
-    //this.currentScore += 0
+  const currentPlayer = this.players[this.currentPlayer];
+    if (randomNumber === 1) {
+    // end turn
+    return currentPlayer.score;
   } else {
-    this.currentScore += randomNumber;
+    currentPlayer.score += randomNumber;
   }
-  return randomNumber;
 };
-
-Game.prototype.
-
-function PlayerSwitch() {
-  this.newPlayer.switch();
-  return otherPlayer;
-}
-
-let newGame = new Game();
-let newPlayer = new Player()
-Game.addPlayer(newPlayer);
-// console.log(Game.addPlayer)
-
-// let newPlayer = new Player("bobby");
-// newPlayer.setScoreToZero();
 
 
 
