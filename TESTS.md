@@ -28,24 +28,17 @@ Code:
 Expected Output: 
   Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
 
-<!-- Test: It should generate a random number between 1 and 6 when the "die" is rolled.
-Code: 
-  const game = new Game();
-  Game.prototype.roll = function () {
-  const randomNumber = Math.floor((Math.random() * 6) + 1);
-  }
-  randomNumber;
-Expected Output: A random number between 1 and 6  -->
-
 Test: If a 1 is rolled, the player's turn should stay the same.  
 Code: 
   const game = new Game();
-  const player = new Player("Player 1");
-  game.addPlayer(Player);
+  const player1 = new Player("Player 1");
+  game.addPlayer(player1);
+  const player2 = new Player("Player 2");
+  game.addPlayer(player2);
   
   const rolledNumber = game.roll();
   console.log(rolledNumber);
-  console.log(player.score);
+  console.log(player1.score);
   
 
 
