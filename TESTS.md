@@ -17,7 +17,7 @@ Expected Output: ("Player 2")
 
 Describe: Game();
 
-Test: Player 1 and 2 score should start at zero and be assigned a ID.
+Test: Player 1 and 2 score should start at zero.
 Code: 
   const game = new Game();
   const player1 = new Player("Player 1");
@@ -28,17 +28,28 @@ Code:
 Expected Output: 
   Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
 
-Test: It should generate a random number between 1 and 6 when the "die" is rolled.
+<!-- Test: It should generate a random number between 1 and 6 when the "die" is rolled.
 Code: 
   const game = new Game();
   Game.prototype.roll = function () {
   const randomNumber = Math.floor((Math.random() * 6) + 1);
   }
   randomNumber;
-Expected Output: A random number between 1 and 6 
+Expected Output: A random number between 1 and 6  -->
 
-Test: If a 1 is rolled, the player's turn should end. 
+Test: If a 1 is rolled, the player's turn should stay the same.  
 Code: 
+  const game = new Game();
+  const player = new Player("Player 1");
+  game.addPlayer(Player);
+  
+  const rolledNumber = game.roll();
+  console.log(rolledNumber);
+  console.log(player.score);
+  
+
+
+
 Expected Output:
 
 Test: If a 2, 3, 4, 5, or 6 are rolled, it should add that value to the player's score. 

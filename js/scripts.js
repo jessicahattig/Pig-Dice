@@ -16,30 +16,22 @@ Player.prototype.setScoreToZero = function () {
 //Business Logic - Game
 function Game() {
   this.players = [];
-  this.playerId = 0;
-  this.currentPlayer = 0;
 };
 
 Game.prototype.addPlayer = function (player) {
-  player.id = this.assignId();
-  this.players[player.id] = player;
-  player.setScoreToZero();
+ if (this.players.length < 2) {
   this.players.push(player);
-};
-
-Game.prototype.assignId = function () {
-  return this.playerId++;
+  player.setScoreToZero();
+ }
 };
 
 Game.prototype.roll = function () {
   const randomNumber = Math.floor((Math.random() * 6) + 1);
-  const currentPlayer = this.players[this.currentPlayer];
-    if (randomNumber === 1) {
-    // end turn
+  const currentPlayer = this.players[0];
+    if (randomNumber !== 1) {
+      currentPlayer.score += randomNumber;
+    }
     return currentPlayer.score;
-  } else {
-    currentPlayer.score += randomNumber;
-  }
 };
 
 
