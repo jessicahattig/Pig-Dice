@@ -1,7 +1,7 @@
-//Business Logic - Player
+//Business Logic-Player
 
 class Player {
-  constructor(name, score) {
+  constructor(name) {
     this.name = name;
     this.score = 0;
   }
@@ -21,7 +21,7 @@ class Game {
   constructor() {
     this.players = [];
   }
-};
+}
 
 Game.prototype.addPlayer = function (player) {
   if (this.players.length < 2) {
@@ -30,14 +30,12 @@ Game.prototype.addPlayer = function (player) {
   }
 };
 
-// Game.prototype.roll = function () {
-//   const randomNumber = Math.floor(Math.random() * 6) + 1;
-//   const currentPlayer = this.players[0];
-//   if (randomNumber !== 1) {
-//     currentPlayer.score += randomNumber;
-//   }
-//   return currentPlayer.score;
-// };
-
-
-
+Game.prototype.roll = function () {
+  const randomNumber = Math.floor(Math.random() * 6) + 1;
+  const currentPlayer = this.players[0];
+  if (randomNumber !== 1) {
+    currentPlayer.score += randomNumber;
+  } 
+  
+  return currentPlayer.score;
+};

@@ -1,4 +1,4 @@
-Describe: Player();
+<!-- Describe: Player();
 
 Test: Player 1 is equal to Player 1.
 Code: 
@@ -27,7 +27,7 @@ Code:
   game.addPlayer(player2);
   player1;
 Expected Output: 
-  Player {name: 'Player 1', score: 0}
+  Player {name: 'Player 1', score: 0} -->
 
 Test: If a 1 is rolled, the player's score stays the same.  
 Code: 
