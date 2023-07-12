@@ -41,14 +41,19 @@ Expected Output: 4
 
 Test: If a 2-6 are rolled, it should add that value to the player's score. 
 Code:
+  const game = new Game();
+  const player1 = new Player("Player 1", 4);
+  game.addPlayer(player1);
 
+  const rolledNumber = game.roll();
+  console.log(rolledNumber);
+  console.log(player1.score);
+Expected Output: 10
 
-Expected Output:
-
-Test: It should end the player's turn if they choose to "hold." 
+<!-- Test: It should end the player's turn if they choose to "hold." 
 Code:
 Expected Output: -->
-
+ -->
 
 
 
