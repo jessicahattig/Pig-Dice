@@ -15,6 +15,7 @@ Code:
   player2;
 Expected Output: ("Player 2")
 
+
 Describe: Game();
 
 Test: Player 1 and 2 score should start at zero.
@@ -26,7 +27,7 @@ Code:
   game.addPlayer(player2);
   player1;
 Expected Output: 
-  Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
+  Player {name: 'Player 1', score: 0}
 
 Test: If a 1 is rolled, the player's score stays the same.  
 Code: 

@@ -7,26 +7,28 @@ class Player {
   }
 };
 
-// Player.prototype.equals = function (otherPlayer) {
-//   return this.name === otherPlayer.name;
-// };
+Player.prototype.equals = function (otherPlayer) {
+  return this.name === otherPlayer.name;
+};
 
-// Player.prototype.setScoreToZero = function () {
-//   this.score = 0;
-// };
+Player.prototype.setScoreToZero = function () {
+  this.score = 0;
+};
 
 
-// //Business Logic - Game
-// class Game() {
-//   this.players = [];
-// };
+//Business Logic - Game
+class Game {
+  constructor() {
+    this.players = [];
+  }
+};
 
-// Game.prototype.addPlayer = function (player) {
-//   if (this.players.length < 2) {
-//     this.players.push(player);
-//     player.setScoreToZero();
-//   }
-// };
+Game.prototype.addPlayer = function (player) {
+  if (this.players.length < 2) {
+    this.players.push(player);
+    player.setScoreToZero();
+  }
+};
 
 // Game.prototype.roll = function () {
 //   const randomNumber = Math.floor(Math.random() * 6) + 1;
