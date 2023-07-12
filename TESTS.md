@@ -28,7 +28,7 @@ Code:
 Expected Output: 
   Player {name: 'Player 1', totalScore: undefined, currentScore: undefined, id: 0, score: 0}
 
-Test: If a 1 is rolled, the player's turn should stay the same.  
+Test: If a 1 is rolled, the player's score stays the same.  
 Code: 
   const game = new Game();
   const player1 = new Player("Player 1", 4);
