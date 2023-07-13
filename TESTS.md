@@ -48,9 +48,20 @@ Code:
   console.log(player1.score)
 Expected Output: 7
 
-<!-- Test: It should end the player's turn if they choose to "hold." 
+Test: It should give each player a unique ID.
 Code:
-Expected Output: --> -->
+  const game = new Game();
+  const player1 = new Player("Player 1")
+  game.addPlayer(player1);
+  const player2 = new Player("Player 2")
+  game.addPlayer(")
+
+Expected:
+
+<!-- Test: It should end players turn if player rolls a 1 and switch to the next players turn. 
+Code:
+
+Expected Output:  -->
 
 
 
