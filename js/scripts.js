@@ -21,18 +21,18 @@ Player.prototype.assignId = function() {
 
 //Business Logic - Game
 function Game() {
-  this.currentId = 1;
+  this.currentId = 0;
   this.players = [];
 };
 
-AddressBook.prototype.assignId = function() {
+  Game.prototype.assignId = function() {
   this.currentId +=1;
   return this.currentId;
 };
 
 Game.prototype.addPlayer = function (player) {
   player.id = this.assignId();
-  this.player[player.id] = player;
+  this.players[player.id] = player;
  if (this.players.length < 2) {
   this.players.push(player);
   player.setScoreToZero();
