@@ -33,6 +33,3 @@ Game.prototype.roll = function () {
     }
     return currentPlayer.score;
 };
-
-
-
